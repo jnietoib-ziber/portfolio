@@ -1,0 +1,5 @@
+# Portfolio · Jon Nieto
+# Prácticas de despliegue seguro de aplicaciones web.
+
+User-agent: *
+Allow: /

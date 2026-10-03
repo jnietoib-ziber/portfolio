@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto · Portfolio</title>
+<meta name="description" content="Detalle de un proyecto del portfolio.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0C0A09">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Portfolio">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Proyecto · Portfolio">
+<meta property="og:description" content="Detalle de un proyecto del portfolio.">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="assets/img/icono.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="enlace-salto" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="contenedor cabecera__interno">
+    <a class="marca" href="index.html">
+      <span data-perfil="alias">jon_nieto</span><span class="marca__cursor" aria-hidden="true"></span>
+    </a>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- Rellena detalle.js -->
+  <div class="proyecto__cabecera">
+    <div class="contenedor">
+      <a class="proyecto__volver" href="index.html#proyectos">← Todos los proyectos</a>
+      <h1 class="proyecto__titulo" id="titulo">Cargando…</h1>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div id="avisos"></div>
+    <div class="proyecto__cuerpo" id="cuerpo">
+      <aside class="indice" id="indice" hidden>
+        <h2 class="indice__titulo">En esta página</h2>
+        <ol id="indice-lista"></ol>
+      </aside>
+      <article class="md" id="articulo"></article>
+    </div>
+    <nav class="proyecto__nav" id="nav-proyectos" aria-label="Otros proyectos"></nav>
+  </div>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__interno">
+    <span>© <span id="anio">2026</span> <span data-perfil="nombre">Jon Nieto</span></span>
+  </div>
+</footer>
+
+<!-- Lightbox de imágenes. <dialog> da foco atrapado y cierre con Esc gratis. -->
+<dialog class="lightbox" id="lightbox" aria-label="Imagen ampliada">
+  <figure class="lightbox__figura">
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox__pie">
+      <span id="lightbox-pie"></span>
+      <button type="button" class="boton" id="lightbox-cerrar">Cerrar (Esc)</button>
+    </figcaption>
+  </figure>
+</dialog>
+
+<script src="assets/js/datos.js" defer></script>
+<script src="assets/js/markdown.js" defer></script>
+<script src="assets/js/detalle.js" defer></script>
+</body>
+</html>

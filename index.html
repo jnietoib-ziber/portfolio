@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio · Puesta en producción segura</title>
+<meta name="description" content="Prácticas de despliegue seguro de aplicaciones web: Docker, servidores, control de versiones con Git y trabajo en equipo con GitHub.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0C0A09">
+
+<!-- Open Graph: al compartir el enlace se ve el título y la descripción.
+     Añade og:image (1200x630) y og:url cuando tengas el dominio publicado. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Portfolio">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Portfolio · Puesta en producción segura">
+<meta property="og:description" content="Prácticas de despliegue seguro de aplicaciones web: Docker, servidores, Git y GitHub.">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="assets/img/icono.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="enlace-salto" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="contenedor cabecera__interno">
+    <a class="marca" href="index.html">
+      <span data-perfil="alias">jon_nieto</span><span class="marca__cursor" aria-hidden="true"></span>
+    </a>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero">
+    <div class="contenedor">
+      <p class="hero__etiqueta" data-perfil="rol">Puesta en producción segura</p>
+      <h1 class="hero__titulo"><span data-perfil="nombre">Jon Nieto</span></h1>
+      <p class="hero__resumen" data-perfil="resumen">
+        Prácticas de despliegue y análisis de aplicaciones web.
+      </p>
+
+      <div class="hero__datos">
+        <div>
+          <span class="dato__valor" id="dato-proyectos">—</span>
+          <span class="etiqueta">proyectos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="proyectos">
+    <div class="contenedor">
+      <div class="seccion__cabecera">
+        <h2 class="seccion__titulo">Proyectos</h2>
+        <p class="contador" id="contador" aria-live="polite"></p>
+      </div>
+
+      <div class="filtros">
+        <label class="solo-lectores" for="buscador">Filtrar proyectos por nombre o contenido</label>
+        <input class="buscador" id="buscador" type="search" placeholder="filtrar: git, docker, ramas…" autocomplete="off">
+      </div>
+
+      <!-- Estados de carga, error y vacío: los rellena app.js -->
+      <div class="rejilla" id="rejilla" aria-busy="true">
+        <div class="esqueleto"></div>
+        <div class="esqueleto"></div>
+        <div class="esqueleto"></div>
+      </div>
+
+      <div id="avisos"></div>
+
+      <noscript>
+        <div class="pista">
+          <h3>JavaScript está desactivado</h3>
+          <p>Las tarjetas de cada proyecto se generan con JavaScript a partir de los archivos de
+             <code>content/</code>. Actívalo para verlas, o abre los archivos
+             <code>content/*.md</code> directamente.</p>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__interno">
+    <span>© <span id="anio">2026</span> <span data-perfil="nombre">Jon Nieto</span></span>
+  </div>
+</footer>
+
+<script src="assets/js/datos.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

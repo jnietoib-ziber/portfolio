@@ -1,0 +1,16 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Node (el proyecto no usa npm, pero por si acaso)
+node_modules/
+
+# Salidas de pruebas
+*.log
+playwright-report/
+test-results/
